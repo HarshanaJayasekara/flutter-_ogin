@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:login/widget/button.dart';
 
 class Login extends StatefulWidget {
-  const Login({super.key});
+  const Login({Key? key}) : super(key: key);
 
   @override
   State<Login> createState() => _LoginState();
@@ -39,30 +40,14 @@ class _LoginState extends State<Login> {
                     right: 35),
                 child: Column(
                   children: [
-                    TextField(
-                      decoration: InputDecoration(
-                          fillColor: Colors.grey.shade100,
-                          filled: true,
-                          hintText: 'Email',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          )),
-                    ),
+                    mm(pas: 'Email'),
                     const SizedBox(height: 30),
-                    TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          fillColor: Colors.grey.shade100,
-                          filled: true,
-                          hintText: 'Password',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          )),
-                    ),
+                    mm(pas: 'Password'),
                     const SizedBox(height: 40),
-                    const Row(
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           'Sign in',
                           style: TextStyle(
                             fontSize: 27,
@@ -71,14 +56,15 @@ class _LoginState extends State<Login> {
                         ),
                         CircleAvatar(
                           radius: 30,
-                          backgroundColor: Color(0xff4c505b),
+                          backgroundColor: const Color(0xff4c505b),
                           child: IconButton(
                             onPressed: () {},
-                            icon: Icon(Icons.arrow_forward),
+                            icon: const Icon(Icons.arrow_forward),
                           ),
-                        )
+                        ),
                       ],
-                    )
+                    ),
+                    IconBtn(pageName: 'register', txtName: 'Sign Up'),
                   ],
                 ),
               ),
