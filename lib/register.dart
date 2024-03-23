@@ -21,7 +21,9 @@ class _MyRegisterState extends State<MyRegister> {
         ),
       ),
       child: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          title: Center(child: Text('Register now')),
+        ),
         backgroundColor: Colors.transparent,
         body: Stack(
           children: [
@@ -43,13 +45,13 @@ class _MyRegisterState extends State<MyRegister> {
                     right: 35),
                 child: Column(
                   children: [
-                    mm(pas: 'Name'),
+                    /*   Mm(pas: 'Name', texpass: false),
                     const SizedBox(height: 30),
-                    mm(pas: 'Email'),
+                    Mm(pas: 'Email', texpass: false),
                     const SizedBox(height: 30),
-                    mm(pas: 'Password'),
+                    Mm(pas: 'Password', texpass: true),
                     const SizedBox(height: 30),
-                    mm(pas: 'Confirm Password'),
+                    Mm(pas: 'Confirm Password', texpass: true),*/
                     const SizedBox(height: 30),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -59,13 +61,16 @@ class _MyRegisterState extends State<MyRegister> {
                           style: TextStyle(
                             fontSize: 27,
                             fontWeight: FontWeight.w700,
+                            color: Colors.white,
                           ),
                         ),
                         CircleAvatar(
                           radius: 30,
                           backgroundColor: const Color(0xff4c505b),
                           child: IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              print('Name');
+                            },
                             icon: const Icon(Icons.arrow_forward),
                           ),
                         ),

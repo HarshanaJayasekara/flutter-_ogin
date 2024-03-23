@@ -19,6 +19,9 @@ class _LoginState extends State<Login> {
         ),
       ),
       child: Scaffold(
+        appBar: AppBar(
+          title: Center(child: Text('Log In')),
+        ),
         backgroundColor: Colors.transparent,
         body: Stack(
           children: [
@@ -35,14 +38,12 @@ class _LoginState extends State<Login> {
             SingleChildScrollView(
               child: Container(
                 padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.5,
+                    top: MediaQuery.of(context).size.height * 0.3,
                     left: 35,
                     right: 35),
                 child: Column(
                   children: [
-                    mm(pas: 'Email'),
-                    const SizedBox(height: 30),
-                    mm(pas: 'Password'),
+                    IconBtn(pageName: 'pageName', txtName: 'true'),
                     const SizedBox(height: 40),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
